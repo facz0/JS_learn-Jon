@@ -20,3 +20,11 @@ function esCapicua(num){
 esCapicua(232)
 
 //ejercicio 3
+function factorial(x){
+    let num_factorial = 1
+    for(let i = 0; i <= x; i++){
+        num_factorial += i
+    }
+    return console.info(num_factorial)
+}
+factorial(5)
