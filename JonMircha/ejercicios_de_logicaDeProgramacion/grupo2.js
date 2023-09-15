@@ -13,6 +13,7 @@ const encontrar = (cadena2 = "", texto = "") => {
     contador = 0
     
     while(i !== -1){
+        //indexOf devulve (-1) cuando no encuentra nada
         i = cadena2.indexOf(texto, i)
         if(i !==-1){
             i++
