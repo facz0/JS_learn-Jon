@@ -13,3 +13,15 @@ const Descuento = (cant_total, porcentaje_descuento) => {
 Descuento(5678943,10);
 
 //ejercicio 3
+const getYear = (date) => {
+    //obtenemos la fecha actual
+    const fechaActual = new Date()
+    //obtenemos al año actual
+    const currentYear = fechaActual.getFullYear()
+    //obtenemos en año a restar con "date"
+    const yearForRest = date.getFullYear()
+
+    return currentYear - yearForRest
+}
+
+getYear(new Date(2000,4,23))
