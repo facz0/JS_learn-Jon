@@ -1,4 +1,4 @@
-const conversor = (x, base = undefined) => {
+const conversor = (x = undefined, base = undefined) => {
     if(x === undefined) return console.warn("no ingresaste un número a convertir")
     if(typeof x !== "number") return console.warn("El valor ingresado no es un número")
     if(base === undefined) return console.warn("no ingresaste una base a convertir")
@@ -8,8 +8,12 @@ const conversor = (x, base = undefined) => {
         //el método parseInt tiene como parámetros(numero, base del número) para así convertir cualquier número a base
         //decimal 
         return console.info(`${x}, base ${base} = ${parseInt(x, base)} base 10`)
+    } else if(base===10){
+        return console.info(`${x} en base ${base} = ${x.toString(2)} base 2`)
     }
 }
+
+conversor(40, 2)
 
 //ejercicio 2
 const Descuento = (cant_total, porcentaje_descuento) => {
@@ -30,17 +34,25 @@ const getYear = (date) => {
     const currentYear = fechaActual.getFullYear()
     //obtenemos el mes actual
     const currentmonth = fechaActual.getMonth() 
+    //obtenemos el día actual
+    const currentday = fechaActual.getDate()
 
     //obtenemos el año a restar con "date"
     const yearForRest = date.getFullYear()
     //obtenemos el mes a restar con "date"
     const monthForRest = date.getMonth()
+    //obtenemos el día a restar con "date"
+    const dayForRest = date.getDate()
 
     let resultantYear = currentYear - yearForRest
 
     if (currentmonth < monthForRest){
         return resultantYear - 1
-    } 
+    } else if (currentmonth === monthForRest){
+        if(currentday < dayForRest){
+            return resultantYear - 1
+        }
+    }
     return resultantYear
 }
 
