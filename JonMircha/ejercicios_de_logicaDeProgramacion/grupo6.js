@@ -24,4 +24,19 @@ const find = (texto) => {
 find("Hola quiero ir a ver gran Turismo de nuevo")
 
 //ejercicio 2
+const validarNombre = (nombre) => {
+    let regExp = /^[A-Za-zÑñáéíóúÁÉÍÓÚ]+[\s\-]+[A-Za-zÑñáéíóúÁÉÍÓÚ]+$/
+    return document.info(regExp.test(nombre))
+}
 
+validarNombre("Fabrizio Cossío")
+
+//ejercicio 3
+const validarCorreo = (email) =>{
+    /*esta es la "regla" general para validar un correo con expresiones reglares. Cabe resaltar que 
+    es editable para situaciones particulares*/
+    let regExp2 = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    return console.info(regExp2.test(email))
+}
+
+validarCorreo("fabo,cossio@gmail.com.p-e")
