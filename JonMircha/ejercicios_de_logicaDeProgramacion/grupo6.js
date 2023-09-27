@@ -22,6 +22,7 @@ const find = (texto) => {
 }
 
 find("Hola quiero ir a ver gran Turismo de nuevo")
+/*también se puede hacer el ejercicio 1 con expresiones regulares*/ 
 
 //ejercicio 2
 const validarNombre = (nombre) => {
