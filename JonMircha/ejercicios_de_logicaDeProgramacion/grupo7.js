@@ -42,3 +42,14 @@ const orden2 = (maxMin = []) =>{
 }
 orden2([-3,6,44,65,3,890,20])
 /*************************************************************************/
+
+const clasificar = (lista = []) => {
+    let pares = []
+    let impares = []
+
+    for (let i = 0; i < lista.length; i++){
+        if(i % 2 === 0){
+            pares.push(lista[i]);
+        }
+    }
+}
