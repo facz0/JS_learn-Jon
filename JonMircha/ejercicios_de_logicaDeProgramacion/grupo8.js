@@ -13,3 +13,24 @@ const ordenArr = (arr = []) => {
 ordenArr([23,4,67,34,15,23])
 
 //ejercicio 2
+const borrarDuplicados = (arr3 = []) => {
+    const newArray3 = []
+    for(let i = 0; i < arr3.length; i++){
+        if(newArray3.indexOf(arr3[i]) === -1){
+            newArray3.push(arr3[i])
+        }
+    }
+    return newArray3
+}
+borrarDuplicados([1,1,2,2,3,3,4,5,6])
+
+//ejercicio 3:
+const calcularPromedio = (nums = []) => {
+    contador = 0
+    for(let i = 0; i < nums.length; i++){
+        contador = contador + nums[i]
+    }
+    return console.info(contador / nums.length)
+}
+
+calcularPromedio([1,2,3,4])
