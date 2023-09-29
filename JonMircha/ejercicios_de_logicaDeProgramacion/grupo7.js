@@ -48,8 +48,13 @@ const clasificar = (lista = []) => {
     let impares = []
 
     for (let i = 0; i < lista.length; i++){
-        if(i % 2 === 0){
+        if(lista[i] % 2 === 0){
             pares.push(lista[i]);
-        }
+        } else {
+            impares.push(lista[i]);
+        } 
     }
+    return console.info(`pares: ${pares}, impares: ${impares}`)
 }
+
+clasificar([1,2,33,44,54,57,68,101,245,364])
