@@ -7,5 +7,12 @@ class Pelicula{
         this.pais = "pais";
         this.genero = "genero";
         this.calificacion = "calificacion"
+
+        
     }
+
+    
+
 }
+
+const sound = new Pelicula()
