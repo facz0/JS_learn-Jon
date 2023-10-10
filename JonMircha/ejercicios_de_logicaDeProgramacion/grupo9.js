@@ -1,19 +1,20 @@
 class Pelicula{
-    constructor(id,title,director,estreno,pais,genero,calificacion){
-        this.id = "ID";
-        this.title = "title";
-        this.director = "director";
-        this.estreno = "estreno";
-        this.pais = "pais";
-        this.genero = "genero";
-        this.calificacion = "calificacion"
+    constructor({id,title,director,estreno,pais,genero,calificacion}){
+        this.id = id;
+        this.title = title;
+        this.director = director;
+        this.estreno = estreno;
+        this.pais = pais;
+        this.genero = genero;
+        this.calificacion = calificacion
 
         this.validarIMDB(id)
     }
 
-    validarCadena(propiedad, valor){
+    validarCadena(propiedad,valor){
         if (!valor) return console.warn(`${propiedad} "${valor}" está vacío`)
         if (typeof valor !== "string") return console.error(`${propiedad} "${valor}" ingresado no es una cadena de texto`)
+        return true
     }
     validarIMDB(id){
         if(this.validarCadena("IMBD id", id)){
@@ -24,8 +25,8 @@ class Pelicula{
         }
     }
 
-    }
+}
 
 const peli = new Pelicula({
-    id: "33holawer"
+    id: "tt1234567"
 })
