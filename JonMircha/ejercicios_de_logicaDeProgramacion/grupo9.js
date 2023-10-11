@@ -12,6 +12,18 @@ class Pelicula{
         this.validarTitulo(titulo)
         this.validarDirector(director)
         this.validarEstreno(estreno)
+        this.validarPais(pais)
+        this.validarGenero(genero)
+    }
+
+    static get listaGeneros(){
+        return ["Action", "Adult", "Adventure", "Animation", "Biography", "Comedy", "Crime", "Documentary" ,"Drama", 
+        "Family", "Fantasy", "Film Noir", "Game-Show", "History", "Horror", "Musical", "Music", "Mystery", "News", 
+        "Reality-TV", "Romance", "Sci-Fi", "Short", "Sport", "Talk-Show", "Thriller", "War", "Western"]
+    }
+
+    static generosAceptados(){
+        return console.info(`Los géneros aceptados son ${Pelicula.listaGeneros.join(", ")}`)
     }
 
     validarCadena(propiedad,valor){
@@ -69,12 +81,22 @@ class Pelicula{
         }
     }
 
+    validarPais(pais){
+        this.validarArreglo("Pais", pais)
+    }
+
+    validarGenero(genero){
+        this.validarArreglo("genero", genero)
+    }
+    
+
 }
 
 const peli = new Pelicula({
     id: "tt1234567",
     titulo: "La gran Sangre",
     director: "Machín Alcantara",
-    estreno: 2020
+    estreno: 2020,
+    pais: []
 })
 
