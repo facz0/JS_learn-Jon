@@ -92,11 +92,13 @@ class Pelicula{
 
 }
 
+Pelicula.generosAceptados()
 const peli = new Pelicula({
     id: "tt1234567",
     titulo: "La gran Sangre",
     director: "Machín Alcantara",
     estreno: 2020,
-    pais: []
+    pais: [Holanda],
+    genero: ["accion","suspense"]
 })
 
