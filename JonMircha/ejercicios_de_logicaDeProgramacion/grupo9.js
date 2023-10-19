@@ -86,7 +86,13 @@ class Pelicula{
     }
 
     validarGenero(genero){
-        this.validarArreglo("genero", genero)
+        if(this.validarArreglo("genero", genero)){
+            for(let gen of genero){
+                if(!Pelicula.listaGeneros.includes(genero)){
+                    return console.error(`Géneros incorrectos "${genero.join(", ")}"`)
+                }
+            }
+        }
     }
     
 
