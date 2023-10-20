@@ -14,6 +14,7 @@ class Pelicula{
         this.validarEstreno(estreno)
         this.validarPais(pais)
         this.validarGenero(genero)
+        this.validarCalificacion(calificacion)
     }
 
     static get listaGeneros(){
@@ -88,11 +89,25 @@ class Pelicula{
     validarGenero(genero){
         if(this.validarArreglo("genero", genero)){
             for(let gen of genero){
-                if(!Pelicula.listaGeneros.includes(genero)){
+                if(!Pelicula.listaGeneros.includes(gen)){
                     return console.error(`Géneros incorrectos "${genero.join(", ")}"`)
+                    
                 }
             }
         }
+    }
+
+    validarCalificacion(calificacion){
+        if(this.validarNumero("Calificación", calificacion)){
+            return (calificacion < 0 || calificacion > 10)
+            ? console.error("La calificacion tiene que ser entre 1 y 10")
+            : this.calificacion = calificacion.toFixed(1)
+        }
+    }
+
+    fichaTecnica(){
+        console.info(`Título: ${this.titulo} \nDirector: ${this.director} \nAño de Estreno: ${this.estreno} 
+        \nPaís(es): ${this.pais} \nGénero(s): ${this.genero} \nCalificación: ${this.calificacion} \nID: ${this.id} `)
     }
     
 
@@ -104,7 +119,10 @@ const peli = new Pelicula({
     titulo: "La gran Sangre",
     director: "Machín Alcantara",
     estreno: 2020,
-    pais: [Holanda],
-    genero: ["accion","suspense"]
+    pais: ["Holanda"],
+    genero: ["accion","Pipi"],
+    calificacion: 3.65965
 })
+
+peli.fichaTecnica()
 
