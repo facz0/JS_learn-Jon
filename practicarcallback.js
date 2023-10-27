@@ -13,9 +13,9 @@ const tareaPablo = (tarea, callback, tiempo) => {
 
 const tareas = [
     () => simple("escribir guión"),
-    () => tareaPablo("hacer miniatura", () => simple("revisar miniatura"), 2000),
+    () => tareaPablo("hacer miniatura", () => simple("-> Revisar miniatura"), 10000),
     () => pesada("grabar video"),
-    () => tareaPablo("editar video", () => simple("revisar video"), 5000)
+    () => tareaPablo("editar video", () => simple("-> Publicar video"), 10)
 
 ]
 
