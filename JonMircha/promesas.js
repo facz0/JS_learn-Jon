@@ -1,7 +1,7 @@
 function cuadradopromise(value) {
-    if(typeof value !== "number") return Promise.reject(
+    if(typeof value !== "number") {return Promise.reject(
         `El valor "${value}" ingresado no es un número`
-    )
+    )}
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve({
