@@ -1,11 +1,11 @@
 function cuadradopromise(value) {
-    if(typeof value !== "number") {return Promise.reject(
-        `El valor "${value}" ingresado no es un número`
-    )}
+    if(typeof value !== "number") {
+        return Promise.reject(`El valor "${value}" ingresado no es un número`)
+    }
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve({
-                value,
+                value: value,  
                 result: value * value
             })
         }, 0 | Math.random()*1000)
@@ -13,7 +13,7 @@ function cuadradopromise(value) {
 }
 
 cuadradopromise(0)
-.then((obj) => {
+.then(obj => {
     console.log("inicio de promesa")
     console.log(`Promesa: ${obj.value}, ${obj.result}`)
     return cuadradopromise(1)
