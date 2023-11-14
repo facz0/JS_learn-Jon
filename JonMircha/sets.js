@@ -1,3 +1,5 @@
+/*SET: Tipo de dato similar a un array pero es de datos únicos o sea,
+no se puede o no se repiten los datos más de una vez*/
 const set = new Set([1,2,3,3,4,true,true,"hola","HOLA"])
 console.log(set)
 /*cantidad de elementos de un set*/
@@ -19,7 +21,8 @@ for(item of set){
 }
 console.log("recorriendfo set 2")
 set2.forEach(item => console.log(item))
-/*Convirtiendo set en array para llegar a un elemento*/
+/*Convirtiendo set en array para llegar a un elemento o acceder a sus elementos
+ya que set2[5] te da undefined*/
 let arr = Array.from(set)
 console.log(arr[1]) 
 /*Eliminar elementos de un set*/
