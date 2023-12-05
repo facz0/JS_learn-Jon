@@ -8,3 +8,15 @@ function imprimir(){
     console.log(this.nombre)
 }
 imprimir()
+
+const obj = {
+    nombre : "contexto objerto",
+    imprimir: function(){
+        console.log(this.nombre)
+    }
+}
+
+const obj2 = {
+    nombre : "contexto objerto 2",
+    imprimir:imprimir
+}
