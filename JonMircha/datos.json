@@ -1,0 +1,11 @@
+{
+    "cadena": "Json",
+    "numero": "25",
+    "booleano": true,
+    "arreglo": [1, 2, 3, 4, 5],
+    "objeto": {
+        "nombre": "Juan",
+        "edad": "34"
+    },
+    "nulo": null
+}
